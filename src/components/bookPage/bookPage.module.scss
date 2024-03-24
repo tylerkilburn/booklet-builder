@@ -1,0 +1,14 @@
+.bookPage {
+  height: calc($printPageHeight / 2 - 8px);
+  width: calc($printPageWidth / 2 - 8px);
+  padding: 8px 0;
+  border: 1px solid var(--theme-grey-1);
+
+  // background-color: teal !important; // >[FOCUS]<
+  // display: flex;
+}
+.bookPageText {
+
+
+  // background-color: red !important; // >[FOCUS]<
+}
