@@ -1,40 +1,32 @@
 import styles from "./App.module.scss"
 
-import groceries from "./data/groceries.json"
+import { bookletPrayers } from "./data/bookletPrayers"
 import { BookPage } from "./components/bookPage/BookPage"
 import { PrintPage } from "./components/printPage/PrintPage"
 
-const BLANK_TEXT = "__________"
-const ITEM_LIMIT = 44
+const BOOKLETS_PER_PAGE = 4
 
 //@ts-ignore
 
 const App = () => {
-  // const data = matchDataToListName(import.meta.env.VITE_LIST_NAME)
+  const bookletPages = bookletPrayers.pages
+
+  const bookletPagesCollection = [
+    [bookletPages[7], bookletPages[0], bookletPages[5], bookletPages[2]],
+    [bookletPages[1], bookletPages[6], bookletPages[3], bookletPages[4]],
+  ]
+
   return (
     <>
-      <PrintPage>
-        <BookPage />
-        <BookPage />
-        <BookPage />
-        <BookPage />
-      </PrintPage>
-      <PrintPage>
-        <BookPage />
-        <BookPage />
-        <BookPage />
-        <BookPage />
-      </PrintPage>
+      {bookletPagesCollection.map((bookletPages) => (
+        <PrintPage>
+          {bookletPages.map((bookletPage) => (
+            <BookPage bookletPage={bookletPage} />
+          ))}
+        </PrintPage>
+      ))}
     </>
   )
-}
-const matchDataToListName = (listName: string) => {
-  switch (listName) {
-    case "grocery":
-    case "groceries":
-      return groceries
-  }
-  return []
 }
 
 export default App

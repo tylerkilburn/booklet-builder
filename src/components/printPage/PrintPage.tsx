@@ -8,6 +8,9 @@ export interface IPrintPageProps {
 export const PrintPage = ({ children }: IPrintPageProps) => (
   <>
     <div class={styles.pageBreak} />
-    <div class={styles.printPage}>{children}</div>
+    <div class={styles.printPage}>
+      <div class={styles.pageCut} />
+      <div class={styles.printPageOutline}>{children}</div>
+    </div>
   </>
 )

@@ -1,16 +1,29 @@
 .printPage {
-  color: var(--theme-grey-3);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 16px;
-  width: $printPageWidth;
-  height: $printPageHeight;
-  border: 2px solid var(--theme-grey-2);
-  margin: 16px;
-  overflow: hidden;
+  position: relative;
 }
 
 .pageBreak {
   page-break-before: always;
+}
+
+.pageCut {
+  background-color:  var(--theme-grey-1);
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.printPageOutline {
+  // border: 2px solid var(--theme-grey-2);
+  color: var(--theme-black);
+  display: flex;
+  flex-wrap: wrap;
+  height: $printPageHeight;
+  justify-content: space-between;
+  margin: 16px;
+  overflow: hidden;
+  position: relative;
+  row-gap: 32px;
+  width: $printPageWidth;
 }
