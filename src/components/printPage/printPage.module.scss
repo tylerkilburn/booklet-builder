@@ -15,15 +15,14 @@
 }
 
 .printPageOutline {
-  // border: 2px solid var(--theme-grey-2);
   color: var(--theme-black);
   display: flex;
   flex-wrap: wrap;
   height: $printPageHeight;
   justify-content: space-between;
-  margin: 16px;
+  margin: 24px 16px 16px;
   overflow: hidden;
   position: relative;
-  row-gap: 32px;
+  gap: 32px;
   width: $printPageWidth;
 }

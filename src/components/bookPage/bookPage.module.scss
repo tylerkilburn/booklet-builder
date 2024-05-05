@@ -1,8 +1,7 @@
 .bookPage {
-  // border: 1px solid var(--theme-grey-2); // >[FOCUS]<
-  height: calc($printPageHeight / 2 - 16px);
+  height: calc($printPageHeight / 2 - 20px);
   padding: 16px;
-  width: calc($printPageWidth / 2 - 8px);
+  width: calc($printPageWidth / 2 - 18px);
   overflow: hidden;
 }
 
